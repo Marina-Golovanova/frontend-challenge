@@ -137,7 +137,7 @@ li {
     opacity: 1;
 }
 
-.gallery__img-heart--liked:hover path {
+.gallery__img-heart--liked:active path {
     fill: none;
     opacity: 1;
 }
