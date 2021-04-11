@@ -18,6 +18,9 @@ body {
     background: #2196F3;
     height: 64px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .nav__items {
@@ -143,7 +146,6 @@ li {
 }
 
 .more {
-    align-self: center;
     width: 195px;
     font-family: Roboto;
     font-size: 14px;
@@ -157,5 +159,22 @@ li {
 }
 
 .more--hidden {
+    display: none;
+}
+
+.empty-gallery {
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.25px;
+    color: #000;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.empty-gallery--hidden {
     display: none;
 }

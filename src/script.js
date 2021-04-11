@@ -54,7 +54,6 @@ function createGallery(data, liked = false) {
 function deleteLike() {
     document.querySelectorAll('.gallery__img-heart--liked').forEach((el) =>
         el.onclick = function (event) {
-            console.log(el);
             el.classList.remove('gallery__img-heart--liked');
             const $cardDelete = event.target.closest('.gallery__item');
             const src = $cardDelete.querySelector('img').src
@@ -63,6 +62,10 @@ function deleteLike() {
             favoriteList = favoriteList.filter((el) => el != src);
             localStorage.setItem('favorite', JSON.stringify(favoriteList));
             $cardDelete.remove();
+            const $empty = document.querySelector('.empty-gallery');
+            if (!favoriteList.length) {
+                $empty.classList.remove('empty-gallery--hidden');
+            }
         }
     )
 }
