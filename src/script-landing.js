@@ -19,7 +19,7 @@ getData(countOffset);
 $more.onclick = () => {
     countOffset += 20;
     getData(countOffset).then(() => {
-        $more.textContent = '...загружаем ещё котиков...';
+        $more.textContent = '...загрузить ещё котиков...';
         $more.style.pointerEvents = 'auto';
     });
     $more.textContent = 'мы пошли за котиками..';
