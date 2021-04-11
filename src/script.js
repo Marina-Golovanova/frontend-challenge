@@ -9,6 +9,7 @@ function createCatCard(src, liked = false) {
     const $svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     $svg.classList.add('gallery__img-heart');
     $svg.setAttribute('viewBox', '0 0 48 48');
+
     if (liked) {
         $svg.classList.add('gallery__img-heart--liked');
     }
@@ -41,8 +42,11 @@ function createCatCard(src, liked = false) {
 
 function createGallery(data, liked = false) {
     const $gallery = document.querySelector('.gallery');
+    const savedArray = localStorage.getItem('favorite');
+    let favoriteList = savedArray ? JSON.parse(savedArray) : [];
+
     for (const src of data) {
-        const $card = createCatCard(src, liked);
+        const $card = createCatCard(src, liked || favoriteList.includes(src));
         $gallery.appendChild($card);
     }
 }

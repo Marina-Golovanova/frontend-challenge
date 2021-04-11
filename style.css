@@ -76,10 +76,9 @@ li {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     margin-top: 36px;
     margin-left: -15px;
-    margin-right: -15px;
+    margin-right: -57px;
 }
 
 .gallery__item {
@@ -89,6 +88,7 @@ li {
     height: 225px;
     cursor: pointer;
     transition: box-shadow .3s;
+    margin-right: 5px;
 }
 
 .gallery__img {
@@ -140,4 +140,22 @@ li {
 .gallery__img-heart--liked:active path {
     fill: none;
     opacity: 1;
+}
+
+.more {
+    align-self: center;
+    width: 195px;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.25px;
+    color: #000;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 31px;
+    margin-bottom: 31px;
+}
+
+.more--hidden {
+    display: none;
 }
